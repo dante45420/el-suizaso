@@ -1,0 +1,121 @@
+/* Shared mobile layout. Loaded last so both versions use the same touch and form rules. */
+.mobile-compare{display:none}img,svg{max-width:100%}.hero-grid>*,.p-hero-layout>*,.story-layout>*,.plan-panel>*,.room-explore>*,.location-layout>*,.faq-layout>*,.place-layout>*{min-width:0}.booking-panel,.summary{max-width:100%}.summary-row>span{min-width:0;overflow-wrap:anywhere}.p-floating[hidden],.whatsapp-float[hidden]{display:none!important}
+@media(max-width:900px){
+  .navlinks.is-open,.proposal-page .navlinks.is-open{display:grid;grid-template-columns:minmax(0,1fr);gap:0;max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px);overflow-y:auto;padding:10px 24px 18px;background:var(--cream);overscroll-behavior:contain}
+  .navlinks a,.proposal-page .navlinks a{display:flex;align-items:center;min-height:48px;font-size:15px;line-height:1.5;border-bottom:1px solid var(--line);padding:10px 0}
+  .navlinks .mobile-compare{display:flex;color:var(--terracotta);border-bottom:0;margin-top:4px}
+  .nav-actions,.proposal-page .nav-actions{display:none}
+  .menu-toggle,.proposal-page .menu-toggle{display:flex;align-items:center;justify-content:center;gap:8px;margin-left:auto;min-width:76px;min-height:44px;font-size:14px;padding:10px 12px;border-radius:3px}
+  .nav,.proposal-page .nav{gap:16px;padding:12px 22px;min-height:72px}
+  .brand,.proposal-page .brand{font-size:24px;gap:8px}
+  .brand-symbol,.proposal-page .brand-symbol{display:none}
+  .brand small,.proposal-page .brand small{font-size:8px;letter-spacing:.13em}
+  .booking-panel .field-group label,.proposal-page .booking-panel .field-group label{font-size:13px;line-height:1.5}
+}
+@media(max-width:760px){
+  html{scroll-padding-top:88px}
+  body{font-size:15px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  header,.proposal-page header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--cream)}
+  .location-strip{display:none}
+  .wrap,.proposal-page .wrap{padding-left:20px;padding-right:20px}
+  section,.proposal-page section{padding:52px 0;scroll-margin-top:88px}
+  h1,h2,h3{text-wrap:balance}
+  .section-head h2,.proposal-page h2,.place-layout h2,.faq h2{font-size:clamp(30px,8.5vw,38px);line-height:1.16;letter-spacing:-.025em}
+  .section-head{margin-bottom:28px}
+  .section-head p,.proposal-page .p-section-head>p,.story-copy>p:not(.eyebrow),.plan-copy>p:not(.eyebrow),.place-layout p,.location-layout p{font-size:15px;line-height:1.75;max-width:none}
+  .eyebrow,.proposal-page .eyebrow{font-size:10px;line-height:1.6;letter-spacing:.14em;margin-bottom:16px}
+  .nav-cta,.proposal-page .nav-cta{min-height:48px;font-size:14px;padding:13px 18px;line-height:1.5;gap:20px;max-width:100%;white-space:normal}
+  .text-link,.p-actions .text-link{font-size:14px;line-height:1.6;display:inline-flex;align-items:center;min-height:44px}
+  .hero-grid,.p-hero-layout,.story-layout,.plan-panel,.room-explore,.location-layout,.p-faq .faq-layout,.place-layout{grid-template-columns:minmax(0,1fr);gap:30px}
+  .hero{padding:34px 0 44px}
+  .hero h1{font-size:clamp(39px,10.5vw,54px);line-height:1.08}
+  .hero .lede{font-size:15px;line-height:1.8}
+  .hero-actions{gap:14px 20px;margin-top:24px}
+  .hero-badges{display:grid;gap:12px;margin-top:24px}
+  .badge{font-size:12px;line-height:1.6}
+  .hero-art{max-width:420px;aspect-ratio:1.1;margin:auto;width:100%}
+  .art-label{font-size:9px;top:20%}.landscape-caption{font-size:9px;left:22px;right:22px}
+  .p-hero{padding:28px 0 36px!important}
+  .p-hero-copy{padding:0}.p-hero h1{font-size:clamp(42px,11.8vw,58px);line-height:1.05}
+  .p-hero-copy>p:not(.eyebrow){font-size:15px;line-height:1.75;margin:22px 0 24px;max-width:none}
+  .p-actions{gap:12px 20px}.hero-handnote{display:none}
+  .hero-slider .photo,.hero-slider .slide{height:clamp(330px,95vw,460px);min-height:0}
+  .hero-slider .photo{border-top-left-radius:65px}
+  .hero-slider .photo-label{left:24px;top:28px;right:24px;max-width:calc(100% - 48px)}
+  .slide-caption{left:24px;right:24px;bottom:86px}
+  .slide-caption>span{font-size:10px;line-height:1.6}
+  .slide-caption h2{font-size:clamp(27px,8vw,36px);max-width:18ch;line-height:1.18}
+  .slider-controls{left:12px;right:12px;bottom:18px;gap:8px}
+  .slider-count{display:none}
+  .slider-dots{gap:0}.slider-dots button{width:32px;height:44px}
+  .slider-arrows{gap:4px}.slider-arrows button{width:44px;height:44px;flex-shrink:0}
+  .slider-arrows [data-hero-play]{font-size:14px}
+  .comfort-strip .comfort-shell{padding:18px 20px 12px;display:block}
+  .comfort-item{flex-basis:100%}
+  .comfort-card{justify-content:center;min-height:76px;gap:16px;border:0;padding:8px 14px}
+  .comfort-icon{width:34px;height:34px;flex-basis:34px}
+  .comfort-card strong{font-size:14px}.comfort-card small{font-size:12px;line-height:1.6}
+  .comfort-controls{position:static;transform:none;justify-content:center;margin-top:4px;gap:12px}
+  .comfort-controls button{width:44px;height:44px;border:1px solid var(--line);border-radius:50%}
+  .comfort-controls [data-comfort-play]{font-size:13px}
+  .story-photos{padding:0;display:grid;grid-template-columns:minmax(0,1fr)}
+  .story-main{height:clamp(260px,76vw,360px);border-radius:3px 3px 45px 3px}
+  .story-detail{position:relative;bottom:auto;right:auto;width:60%;height:155px;min-height:0;margin:-65px -6px 0 auto;border:6px solid var(--cream)}
+  .story-photos .photo-note{position:static;max-width:none;font-size:17px;transform:none;margin-top:12px}
+  .story-copy h2{margin-bottom:22px}.story-details summary{font-size:14px;min-height:44px;line-height:1.7}.story-details p{font-size:14px}
+  .p-section-head{display:block;margin-bottom:28px}.p-section-head>div{max-width:none}.p-section-head>p{margin-top:18px;max-width:none}
+  .plan-tabs{overflow-x:auto;scrollbar-width:none;gap:12px;justify-content:flex-start;scroll-snap-type:x proximity;overscroll-behavior-x:contain;padding-bottom:6px;margin-bottom:24px}
+  .plan-tabs::-webkit-scrollbar{display:none}
+  .plan-tabs button{max-width:none;flex:0 0 auto;padding:13px 14px;font-size:13px;min-height:48px;white-space:nowrap;border:1px solid var(--line);border-radius:3px;bottom:0;scroll-snap-align:start}
+  .plan-tabs button[aria-selected=true]{background:var(--olive);color:var(--cream);border-color:var(--olive)}
+  .plan-panel>.photo{height:clamp(240px,72vw,350px)}
+  .plan-copy h3{font-size:34px;line-height:1.2}
+  .plan-copy ul{font-size:14px;line-height:1.8;padding-left:20px;margin:22px 0 26px}.plan-copy li+li{margin-top:8px}
+  .photo-label{font-size:11px;line-height:1.5;letter-spacing:0;left:16px;right:16px;top:16px}
+  .show-example-photos .photo-label{font-size:10px;max-width:calc(100% - 32px)}
+  .room-feature{position:relative;top:auto;height:clamp(240px,72vw,350px);border-top-right-radius:55px}
+  .room-options summary{gap:14px;font-size:23px;line-height:1.3;padding:22px 25px 22px 0;min-height:64px}
+  .room-options summary>span{min-width:0}.room-options summary>span:first-child{font-size:12px;flex-shrink:0}
+  .room-options summary small{font-size:13px;line-height:1.6;margin-top:8px}
+  .room-description{padding:0 8px 22px 29px}.room-description p{font-size:14px;line-height:1.75}.room-description>span{font-size:12px;line-height:1.6;display:block}
+  .room-disclaimer{font-size:13px;line-height:1.7;margin:24px 0}
+  .room-list,#servicios .room-list{grid-template-columns:minmax(0,1fr)}
+  .room-card,#servicios .room-card{padding:26px 0;border-right:0;border-bottom:1px solid var(--line)}
+  .room-card h3{font-size:25px}.room-meta{font-size:14px;line-height:1.7}.room-card p{font-size:14px!important;line-height:1.8}.room-price{font-size:28px}.room-price span{font-size:13px}
+  .moments{padding-top:8px!important}.moments .p-section-head>div{max-width:none}.moments h2{font-size:32px}
+  .gallery-controls{margin-top:20px;gap:12px}.gallery-controls button{width:44px;height:44px}
+  .gallery-help{font-size:13px;line-height:1.6;margin-bottom:22px}
+  .moment-track{padding-left:20px;padding-right:20px;scroll-padding-left:20px;gap:14px}
+  .moment-track figure{flex:0 0 min(78vw,330px)}
+  .moment-track figure .photo,.moment-track figure:nth-child(even) .photo{height:280px;margin-top:0}
+  .moment-track figcaption{font-size:17px;line-height:1.5;padding-top:12px}
+  .easy-layout{grid-template-columns:minmax(0,1fr);gap:26px}.easy-layout h2{font-size:34px}
+  .easy-step{padding-left:40px;position:relative}.easy-step>span{position:absolute;top:0;left:0;font-size:23px}.easy-step h3{font-size:23px;margin-top:0}.easy-step p{font-size:14px;max-width:none;line-height:1.75;margin-bottom:0}
+  .booking,.p-booking{padding:48px 0!important}.booking-panel,.p-booking .booking-panel{grid-template-columns:minmax(0,1fr);padding:24px 18px;gap:24px;border-radius:4px}
+  .field-group{margin-bottom:18px;gap:8px}.field-group input,.field-group select,.proposal-page .field-group input,.proposal-page .field-group select{font-size:16px;min-height:50px;width:100%;max-width:100%;min-width:0}
+  .field-group select{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .field-row.date-row{grid-template-columns:minmax(0,1fr);gap:0}
+  .date-placeholder{font-size:16px}.field-group .date-control input[type=date]{font-size:16px;height:52px;min-height:52px}
+  .summary,.p-booking .summary{padding:22px 16px;min-width:0;width:100%}
+  .summary-row,.p-booking .summary-row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:12px;padding:12px 0;font-size:13px;line-height:1.65}
+  .summary-row>span:last-child{max-width:100%;text-align:right}
+  .summary-row.total,.p-booking .summary-row.total{font-size:20px;line-height:1.4;grid-template-columns:minmax(0,1fr) auto;gap:12px;padding-top:18px}
+  .btn-whatsapp,.p-booking .btn-whatsapp{font-size:14px;line-height:1.5;min-height:52px;padding:14px 12px;margin-top:18px}
+  .note-inline,.p-booking .note-inline{font-size:12px;line-height:1.8;margin-bottom:0}
+  .location-layout .photo{height:clamp(240px,70vw,340px)}.location-layout address,address{font-size:15px;line-height:1.8}.address-card{padding:24px 0;border-left:0;border-top:1px solid var(--line)}
+  .p-faq summary,summary{font-size:15px;line-height:1.65;min-height:44px}.p-faq details p,details p{font-size:14px;line-height:1.8}
+  .p-faq h2{margin-bottom:20px}.p-faq .faq-layout{gap:30px}
+  .photo-preview-bar .wrap{align-items:flex-start;padding-top:14px;padding-bottom:14px;gap:10px}
+  .photo-preview-bar .wrap>span{font-size:12px;line-height:1.6;flex-basis:100%}
+  .photo-preview-bar button{font-size:13px;min-height:44px;padding:10px 14px}.photo-preview-bar p{font-size:12px;line-height:1.7}
+  .footer-grid{grid-template-columns:minmax(0,1fr);gap:20px}.p-footer-top{flex-direction:column;gap:24px}.p-footer-top p,footer p,footer a,.p-footer-top a{font-size:14px;line-height:1.8;overflow-wrap:anywhere}
+  .footer-bottom,.proposal-page .footer-bottom{font-size:12px;line-height:1.7;display:grid;gap:12px}.footer-bottom a{font-size:12px}
+  footer,.proposal-page footer{padding-bottom:calc(110px + env(safe-area-inset-bottom))}
+  .p-floating,.whatsapp-float{left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom));max-width:380px;width:auto;margin:0 auto;min-height:50px;padding:12px 18px;justify-content:center;gap:24px;font-size:14px;line-height:1.5;border-radius:4px;box-shadow:0 3px 14px #2c2b1f20}
+  body:has(input:focus) .p-floating,body:has(input:focus) .whatsapp-float,body:has(select:focus) .p-floating,body:has(select:focus) .whatsapp-float{display:none}
+  a,button,input,select{-webkit-tap-highlight-color:#a6513126}
+  .nav-cta:hover{transform:none}
+}
+@media(max-width:480px){.field-row{grid-template-columns:minmax(0,1fr);gap:0}.nav,.proposal-page .nav{padding:10px 20px;min-height:68px}.plan-copy h3{font-size:32px}.summary-row.total,.p-booking .summary-row.total{font-size:19px}.photo-note{font-size:16px!important}}
+@media(max-width:350px){.wrap,.proposal-page .wrap{padding-left:16px;padding-right:16px}.nav,.proposal-page .nav{padding-left:16px;padding-right:16px}.brand,.proposal-page .brand{font-size:22px}.brand small,.proposal-page .brand small{font-size:7px}.p-hero h1{font-size:41px}.booking-panel,.p-booking .booking-panel{padding:20px 14px}.summary,.p-booking .summary{padding:20px 12px}.summary-row,.p-booking .summary-row{font-size:12px}.slide-caption h2{font-size:27px}.slide-caption{left:20px;right:20px}.comfort-strip .comfort-shell{padding-left:16px;padding-right:16px}}
+@media(max-width:760px){html{scroll-padding-top:0}.slider-dots{display:none}.slider-count{display:block;font-size:12px;letter-spacing:.08em}.slider-controls{left:20px;right:20px}.photo-grain{display:none}}

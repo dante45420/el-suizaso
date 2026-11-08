@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Hostal en Gualliguaica, Puclaro · El Suizaso | Valle de Elqui</title>
 <meta name="description" content="El Suizaso: hostal en Gualliguaica, cerca del embalse Puclaro, Valle de Elqui. Habitaciones privadas y compartidas, desayuno y consultas por WhatsApp.">
 <meta name="theme-color" content="#3f4227">
@@ -17,11 +17,12 @@
 <link rel="preload" href="assets/fraunces-400.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="assets/work-sans-400.woff" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="assets/styles.css?v=20261108-fechas">
-<script src="assets/main.js?v=20261108-fechas" defer></script>
+<script src="assets/main.js?v=20261108-mobile" defer></script>
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Hostel", "name": "El Suizaso", "description": "Hostal en Gualliguaica, cerca del embalse Puclaro, Valle de Elqui. Habitaciones privadas y compartidas con baños compartidos y desayuno incluido.", "telephone": "+56981591765", "address": {"@type": "PostalAddress", "streetAddress": "Marcelo Olivares 212", "addressLocality": "Gualliguaica, Vicuña", "addressRegion": "Coquimbo", "addressCountry": "CL"}, "petsAllowed": true, "url": "https://el-suizaso.vercel.app/", "@id": "https://el-suizaso.vercel.app/#hostal"}</script>
 
 <!-- DOMAIN-SEO --><link rel="canonical" href="https://el-suizaso.vercel.app/"><meta property="og:url" content="https://el-suizaso.vercel.app/"><!-- /DOMAIN-SEO -->
+<link rel="stylesheet" href="assets/mobile.css?v=20261108-mobile"><script src="assets/mobile.js?v=20261108-mobile" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -39,6 +40,7 @@
       <a class="schedule-nav" href="#reservar">Quiero agendar <span aria-hidden="true">↓</span></a>
       <a href="#galeria">Galería</a>
       <a href="#contacto">Contacto</a>
+      <a class="mobile-compare" href="/propuesta">Nuestra propuesta ↗</a>
     </nav>
     <div class="nav-actions"><a class="proposal-link" href="/propuesta">Nuestra propuesta <span aria-hidden="true">↗</span></a><a class="nav-cta schedule-cta" href="#reservar">Quiero reservar <span aria-hidden="true">↓</span></a></div>
   </div>
@@ -165,11 +167,11 @@
       <div>
         <div class="field-row date-row">
           <div class="field-group">
-            <label for="checkin">Check-in</label>
+            <label for="checkin">Llegada</label>
             <div class="date-control"><input type="date" id="checkin" required data-empty="true"><span class="date-placeholder" aria-hidden="true">Seleccionar fecha</span></div>
           </div>
           <div class="field-group">
-            <label for="checkout">Check-out</label>
+            <label for="checkout">Salida</label>
             <div class="date-control"><input type="date" id="checkout" required data-empty="true"><span class="date-placeholder" aria-hidden="true">Seleccionar fecha</span></div>
           </div>
         </div>
@@ -177,10 +179,10 @@
         <div class="field-group">
           <label for="roomtype">Tipo de habitación</label>
           <select id="roomtype">
-            <option value="35000" data-name="Cama en pieza compartida" data-mode="person">Cama en pieza compartida — $35.000 por persona/noche</option>
-            <option value="70000" data-name="Habitación privada" data-mode="room" data-multi="true">Habitación privada — $70.000 por habitación/noche</option>
-            <option value="35000" data-name="Pieza grande N°5 (por persona)" data-mode="person">Pieza grande N°5 — $35.000 por persona/noche</option>
-            <option value="140000" data-name="Pieza grande N°5 (pieza completa)" data-mode="room">Pieza grande N°5 — $140.000 pieza completa/noche</option>
+            <option value="35000" data-name="Cama en pieza compartida" data-mode="person">Cama compartida</option>
+            <option value="70000" data-name="Habitación privada" data-mode="room" data-multi="true">Habitación privada</option>
+            <option value="35000" data-name="Pieza grande N°5 (por persona)" data-mode="person">Pieza grande · por persona</option>
+            <option value="140000" data-name="Pieza grande N°5 (pieza completa)" data-mode="room">Pieza grande · completa</option>
           </select>
         </div>
 

@@ -52,3 +52,8 @@ El hero avanza cada 5,5 segundos; servicios cada 4,2 segundos. Ambos se pausan m
 El botón «Ver fotos de ejemplo» alterna con los marcadores. Las imágenes de Unsplash solo se solicitan tras activarlo; se sirven localmente y llevan aviso visible de que no son fotografías del hostal. Las fuentes se documentan en assets/referencias/FUENTES.txt.
 
 Dominio elsuizaso.cl preparado en Vercel junto con www.elsuizaso.cl redirigido al dominio principal. Pendiente: DNS en NIC Chile y comprobación HTTPS. Canonical y sitemap mantienen el dominio vercel.app hasta verificar el nuevo dominio.
+
+
+## Revisión móvil
+
+assets/mobile.css y assets/mobile.js se comparten entre ambas versiones. Cabecera compacta con comparación en el menú móvil, zonas de toque ampliadas, textos legibles, galerías y pestañas horizontales, formularios en una columna en pantallas estrechas, opciones de habitación abreviadas y fechas con estado vacío explícito. La acción flotante se oculta al entrar el cotizador o pie de página al viewport y al editar campos. Safe areas de iPhone y fuente de 16px en inputs para evitar zoom automático. Se verifica lógica del menú y visibilidad del CTA en work/test-mobile.cjs (script de desarrollo fuera del sitio). Revisión visual en iPhone real pendiente por ausencia de la herramienta de navegador requerida en el entorno.
