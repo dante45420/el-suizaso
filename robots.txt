@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://el-suizaso.vercel.app/sitemap.xml
