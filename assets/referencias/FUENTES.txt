@@ -1,0 +1,10 @@
+Fotografías ilustrativas de referencia descargadas de Unsplash.
+No muestran El Suizaso, sus instalaciones ni el embalse Puclaro.
+Solo se cargan en la web al activar «Ver fotos de ejemplo».
+Licencia: https://unsplash.com/license
+
+paisaje.webp: https://images.unsplash.com/photo-1470770841072-f978cf4d019e
+habitacion.webp: https://images.unsplash.com/photo-1611892440504-42a792e24d32
+desayuno.webp: https://images.unsplash.com/photo-1533089860892-a7c6f0a88666
+amigos.webp: https://images.unsplash.com/photo-1529156069898-49953e39b3ac
+terraza.webp: https://images.unsplash.com/photo-1445019980597-93fa8acb246c

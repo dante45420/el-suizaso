@@ -34,7 +34,7 @@ Se revisaron estructura HTML, IDs, anclas, sintaxis JS y JSON. Pruebas de lógic
 
 ## Segunda propuesta visual
 
-Disponible en `/propuesta`, con acceso «Nuestra propuesta» en el navbar original. Incluye carrusel manual con botones, teclado y gesto táctil; pestañas de panoramas; habitaciones desplegables y galería horizontal. Mantiene un solo CTA general de habitaciones y el cotizador por WhatsApp.
+Disponible en `/propuesta`, con acceso «Nuestra propuesta» en el navbar original. Incluye carrusel automático con pausa, botones, teclado y gesto táctil; pestañas de panoramas; habitaciones desplegables y galería horizontal. Mantiene un solo CTA general de habitaciones y el cotizador por WhatsApp.
 
 La propuesta tiene `noindex,follow` mientras se compara con la portada para evitar competir con contenido duplicado. Si se elige como portada, mover su contenido a index.html, actualizar canonical/robots y conservar las URLs principales. No se cambió el sitemap de producción para indexar un diseño de comparación.
 
@@ -43,3 +43,12 @@ Los 16 espacios «Poner foto» son marcadores, no fotografías del negocio. Prio
 Mejoras recomendadas para la siguiente etapa: retratos reales de anfitriones y una bienvenida con sus nombres; capacidad y disponibilidad confirmadas de cada habitación; reseñas auténticas con fuente; guía breve con panoramas y tiempos verificados; ficha de Google Business Profile y dominio propio. No se publicaron reseñas, nombres, rutas ni horarios inventados.
 
 La revisión estática y las pruebas de estado de las interacciones se ejecutaron; la revisión visual de esta segunda propuesta en navegador queda pendiente porque el entorno no ofrece su herramienta de navegador requerida.
+
+
+## Carruseles y fotos de ejemplo
+
+El hero avanza cada 5,5 segundos; servicios cada 4,2 segundos. Ambos se pausan mediante control explícito, al pasar el cursor, al recibir foco, en pestaña oculta o fuera del viewport. El movimiento reducido inicia en pausa. La franja de ocho servicios muestra hasta cuatro opciones en escritorio, dos en tablet y una en móvil. Los iconos SVG son locales y de trazo fino.
+
+El botón «Ver fotos de ejemplo» alterna con los marcadores. Las imágenes de Unsplash solo se solicitan tras activarlo; se sirven localmente y llevan aviso visible de que no son fotografías del hostal. Las fuentes se documentan en assets/referencias/FUENTES.txt.
+
+Dominio elsuizaso.cl preparado en Vercel junto con www.elsuizaso.cl redirigido al dominio principal. Pendiente: DNS en NIC Chile y comprobación HTTPS. Canonical y sitemap mantienen el dominio vercel.app hasta verificar el nuevo dominio.

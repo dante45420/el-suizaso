@@ -1,5 +1,33 @@
-/* Manual carousel: no timers, no autoplay, no tracking. */
+/* Lightweight carousels with pause controls and reduced-motion support. */
 (() => {
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  function autoAdvance(root, button, advance, delay, onState = () => {}) {
+    let paused = motion.matches, hover = false, focused = false, visible = true, timer;
+    function stop() { clearTimeout(timer); timer = undefined; }
+    function schedule() {
+      stop();
+      button.textContent = paused ? '▶' : 'Ⅱ';
+      button.setAttribute('aria-pressed', String(paused));
+      button.setAttribute('aria-label', paused ? 'Reanudar presentación automática' : 'Pausar presentación automática');
+      onState(paused || hover || focused || !visible || document.hidden);
+      if (!paused && !hover && !focused && visible && !document.hidden) {
+        timer = setTimeout(() => { advance(); schedule(); }, delay);
+      }
+    }
+    button.addEventListener('click', () => { paused = !paused; schedule(); });
+    root.addEventListener('mouseenter', () => {hover = true; schedule();});
+    root.addEventListener('mouseleave', () => {hover = false; schedule();});
+    root.addEventListener('focusin', () => {focused = true; schedule();});
+    root.addEventListener('focusout', event => {
+      if (!event.relatedTarget || !root.contains(event.relatedTarget)) {focused = false; schedule();}
+    });
+    document.addEventListener('visibilitychange', schedule);
+    motion.addEventListener('change', () => { if (motion.matches) paused = true; schedule(); });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(entries => {visible = entries[0].isIntersecting; schedule();}, {threshold:.15}).observe(root);
+    }
+    schedule();
+  }
   const carousel = document.querySelector('.hero-slider');
   if (!carousel) return;
   const slides = Array.from(carousel.querySelectorAll('[data-slide]'));
@@ -27,6 +55,30 @@
     const dy = event.changedTouches[0].clientY - startY;
     if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.5) show(current + (dx < 0 ? 1 : -1));
   }, {passive:true});
+  autoAdvance(carousel, carousel.querySelector('[data-hero-play]'), () => show(current + 1), 5500,
+    paused => count.setAttribute('aria-live', paused ? 'polite' : 'off'));
+  const comfort = document.querySelector('.comfort-strip');
+  const comfortViewport = comfort.querySelector('.comfort-viewport');
+  const comfortItems = Array.from(comfort.querySelectorAll('.comfort-item'));
+  function scrollComfort(direction) {
+    const width = comfortItems[0].getBoundingClientRect().width;
+    if (width <= 0) return;
+    const visible = Math.max(1, Math.round(comfortViewport.clientWidth / width));
+    const maxIndex = Math.max(0, comfortItems.length - visible);
+    const currentIndex = Math.round(comfortViewport.scrollLeft / width);
+    let next = currentIndex + direction;
+    if (next > maxIndex) next = 0;
+    if (next < 0) next = maxIndex;
+    comfortViewport.scrollTo({left:next * width, behavior: motion.matches ? 'instant' : 'smooth'});
+  }
+  comfort.querySelector('[data-comfort-prev]').addEventListener('click', () => scrollComfort(-1));
+  comfort.querySelector('[data-comfort-next]').addEventListener('click', () => scrollComfort(1));
+  comfortViewport.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+      event.preventDefault(); scrollComfort(event.key === 'ArrowRight' ? 1 : -1);
+    }
+  });
+  autoAdvance(comfort, comfort.querySelector('[data-comfort-play]'), () => scrollComfort(1), 4200);
   const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
   function selectTab(index, focus = false) {
     tabs.forEach((tab, i) => {
