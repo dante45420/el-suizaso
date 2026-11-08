@@ -14,8 +14,8 @@
 <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preload" href="assets/fraunces-400.woff" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="assets/work-sans-400.woff" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="assets/styles.css?v=20261108-propuesta"><link rel="stylesheet" href="assets/propuesta.css?v=20261108-carruseles"><link rel="stylesheet" href="assets/referencias.css">
-<script src="assets/main.js" defer></script><script src="assets/propuesta.js?v=20261108-carruseles" defer></script><script src="assets/referencias.js" defer></script>
+<link rel="stylesheet" href="assets/styles.css?v=20261108-fechas"><link rel="stylesheet" href="assets/propuesta.css?v=20261108-carruseles"><link rel="stylesheet" href="assets/referencias.css">
+<script src="assets/main.js?v=20261108-fechas" defer></script><script src="assets/propuesta.js?v=20261108-carruseles" defer></script><script src="assets/referencias.js" defer></script>
 
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Hostel", "name": "El Suizaso", "description": "Hostal en Gualliguaica, cerca del embalse Puclaro, Valle de Elqui. Habitaciones privadas y compartidas con baños compartidos y desayuno incluido.", "telephone": "+56981591765", "address": {"@type": "PostalAddress", "streetAddress": "Marcelo Olivares 212", "addressLocality": "Gualliguaica, Vicuña", "addressRegion": "Coquimbo", "addressCountry": "CL"}, "petsAllowed": true, "url": "https://el-suizaso.vercel.app/", "@id": "https://el-suizaso.vercel.app/#hostal"}</script>
 
@@ -37,14 +37,14 @@
 <section class="easy-stay"><div class="wrap"><p class="eyebrow">VENIR TIENE QUE SER FÁCIL</p><div class="easy-layout"><h2>Menos vueltas.<br>Más ganas de venir.</h2><div class="easy-step"><span>01</span><h3>Elige tus días</h3><p>Usa el cotizador para hacerte una idea de tu estadía.</p></div><div class="easy-step"><span>02</span><h3>Conversemos</h3><p>Envíanos tu consulta por WhatsApp. Resolvemos tus dudas y confirmamos disponibilidad.</p></div><div class="easy-step"><span>03</span><h3>Prepara tu escapada</h3><p>Coordinamos el pago y tu llegada. Y si necesitas traslado, consúltanos.</p></div></div></div></section>
 <section class="booking p-booking" id="reservar"><div class="wrap"><div class="p-section-head"><div><p class="eyebrow">TU PRÓXIMA PAUSA</p><h2>¿Nos vemos en El Suizaso?</h2></div><p>Elige tus fechas y te ayudamos con el resto. La cotización es referencial; confirmamos disponibilidad y tarifa final por WhatsApp.</p></div><noscript><p>Consulta tu estadía por <a href="https://wa.me/56981591765">WhatsApp</a>.</p></noscript><form class="booking-panel" id="booking-form">
       <div>
-        <div class="field-row">
+        <div class="field-row date-row">
           <div class="field-group">
             <label for="checkin">Check-in</label>
-            <input type="date" id="checkin" required>
+            <div class="date-control"><input type="date" id="checkin" required data-empty="true"><span class="date-placeholder" aria-hidden="true">Seleccionar fecha</span></div>
           </div>
           <div class="field-group">
             <label for="checkout">Check-out</label>
-            <input type="date" id="checkout" required>
+            <div class="date-control"><input type="date" id="checkout" required data-empty="true"><span class="date-placeholder" aria-hidden="true">Seleccionar fecha</span></div>
           </div>
         </div>
 

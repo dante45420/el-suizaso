@@ -28,6 +28,7 @@
     return Math.max(0, (Date.parse(checkout.value + 'T00:00:00Z') - Date.parse(checkin.value + 'T00:00:00Z')) / 86400000);
   }
   function recalc() {
+    [checkin, checkout].forEach(input => input.setAttribute('data-empty', String(!input.value)));
     checkin.min = localDate();
     checkout.min = nextDate(checkin.value >= checkin.min ? checkin.value : checkin.min);
     const opt = roomSelect.selectedOptions[0];
