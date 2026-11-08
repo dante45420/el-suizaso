@@ -47,7 +47,7 @@ La revisión estática y las pruebas de estado de las interacciones se ejecutaro
 
 ## Carruseles y fotos de ejemplo
 
-El hero avanza cada 5,5 segundos; servicios cada 2 segundos. Ambos se pausan mediante control explícito, al pasar el cursor, al recibir foco, en pestaña oculta o fuera del viewport. El movimiento reducido inicia en pausa. La franja de ocho servicios muestra hasta cuatro opciones en escritorio, dos en tablet y una en móvil. Los iconos SVG son locales y de trazo fino.
+El hero avanza cada 5,5 segundos; servicios cada 2 segundos. Ambos se pausan mediante control explícito, al pasar el cursor, al recibir foco, en pestaña oculta o fuera del viewport. El movimiento reducido inicia en pausa. La franja de ocho servicios muestra hasta cuatro opciones en escritorio, dos en tablet y dos en móvil. Los iconos SVG son locales y de trazo fino.
 
 El botón «Ver fotos de ejemplo» alterna con los marcadores. Las imágenes de Unsplash solo se solicitan tras activarlo; se sirven localmente y llevan aviso visible de que no son fotografías del hostal. Las fuentes se documentan en assets/referencias/FUENTES.txt.
 
@@ -59,3 +59,5 @@ Dominio elsuizaso.cl preparado en Vercel junto con www.elsuizaso.cl redirigido a
 assets/mobile.css y assets/mobile.js se comparten entre ambas versiones. Cabecera compacta con comparación en el menú móvil, zonas de toque ampliadas, textos legibles, galerías y pestañas horizontales, formularios en una columna en pantallas estrechas, opciones de habitación abreviadas y fechas con estado vacío explícito. La acción flotante se oculta al entrar el cotizador o pie de página al viewport y al editar campos. Safe areas de iPhone y fuente de 16px en inputs para evitar zoom automático. Se verifica lógica del menú y visibilidad del CTA en work/test-mobile.cjs (script de desarrollo fuera del sitio). Revisión visual en iPhone real pendiente por ausencia de la herramienta de navegador requerida en el entorno.
 
 En pantallas táctiles, hover sintético y foco por toque no detienen el carrusel. El foco visible de teclado sigue pausando las presentaciones.
+
+Panoramas: tres opciones visibles simultáneamente en móvil, con iconos (Descansar, Explorar y Compartir). Separación por fondos cálidos alternados y bordes sutiles. Se retiró el enlace intermedio a panoramas y se usó un título autocontenido.
