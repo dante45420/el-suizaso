@@ -15,9 +15,11 @@
       }
     }
     button.addEventListener('click', () => { paused = !paused; schedule(); });
-    root.addEventListener('mouseenter', () => {hover = true; schedule();});
-    root.addEventListener('mouseleave', () => {hover = false; schedule();});
-    root.addEventListener('focusin', () => {focused = true; schedule();});
+    if (matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      root.addEventListener('mouseenter', () => {hover = true; schedule();});
+      root.addEventListener('mouseleave', () => {hover = false; schedule();});
+    }
+    root.addEventListener('focusin', event => {focused = event.target.matches(':focus-visible'); schedule();});
     root.addEventListener('focusout', event => {
       if (!event.relatedTarget || !root.contains(event.relatedTarget)) {focused = false; schedule();}
     });
@@ -78,7 +80,7 @@
       event.preventDefault(); scrollComfort(event.key === 'ArrowRight' ? 1 : -1);
     }
   });
-  autoAdvance(comfort, comfort.querySelector('[data-comfort-play]'), () => scrollComfort(1), 4200);
+  autoAdvance(comfort, comfort.querySelector('[data-comfort-play]'), () => scrollComfort(1), 2000);
   const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
   function selectTab(index, focus = false) {
     tabs.forEach((tab, i) => {
